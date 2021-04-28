@@ -1,0 +1,57 @@
+﻿<UserControl
+    x:Class="CloudCash.Client.Modules.TableInfo.Components.TableInfoEdit"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CloudCash.Client.Modules.TableInfo.Components"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:converters="using:CloudCash.Client.Converters" 
+    xmlns:controls="using:CloudCash.Client.Controls"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <converters:ByteToDoubleConverter x:Key="ByteToDoubleConverter"/>
+        <converters:ShortToDoubleConverter x:Key="ShortToDoubleConverter"/>
+        <converters:PropertyStringValueToLocalizedStringConverter x:Key="PropertyStringValueToLocalizedStringConverter"/>
+    </UserControl.Resources>
+    
+    <StackPanel>
+        <TextBlock x:Uid="TableInfoEdit_Title"
+                   Style="{StaticResource TitleTextBlockStyle}"/>
+
+        <TextBox Margin="0 24 0 0"
+                 Header="{Binding Data, ConverterParameter=Name, Converter={StaticResource PropertyStringValueToLocalizedStringConverter}}"
+                 Text="{Binding Data.Name, Mode=TwoWay}"/>
+
+        <NumberBox Margin="0 12 0 0"
+                   Minimum="0"
+                   Header="{Binding Data, ConverterParameter=Size, Converter={StaticResource PropertyStringValueToLocalizedStringConverter}}"
+                   Value="{Binding Data.Size, Mode=TwoWay, Converter={StaticResource ByteToDoubleConverter}}"/>
+
+        <NumberBox Margin="0 12 0 0"
+                   Header="{Binding Data, ConverterParameter=PositionX, Converter={StaticResource PropertyStringValueToLocalizedStringConverter}}"
+                   Value="{Binding Data.PositionX, Mode=TwoWay, Converter={StaticResource ShortToDoubleConverter}}"/>
+
+        <NumberBox Margin="0 12 0 0"
+                   Header="{Binding Data, ConverterParameter=PositionY, Converter={StaticResource PropertyStringValueToLocalizedStringConverter}}"
+                   Value="{Binding Data.PositionY, Mode=TwoWay, Converter={StaticResource ShortToDoubleConverter}}"/>
+
+        <ComboBox x:Uid="TableInfoEdit_Category"
+                  HorizontalAlignment="Stretch"
+                  Margin="0 12 0 0"
+                  Header="{Binding Data, ConverterParameter=Category, Converter={StaticResource PropertyStringValueToLocalizedStringConverter}}"
+                  ItemsSource="{Binding TableCategories}"
+                  SelectedItem="{Binding Data.Category, Mode=TwoWay}">
+
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+
+        </ComboBox>
+
+        <controls:ValidationMessage DataContext="{Binding}"/>
+
+    </StackPanel>
+</UserControl>

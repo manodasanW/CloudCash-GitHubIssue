@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>CloudCash</value>
+  </data>
+  <data name="BusyOverlay_Message.Text" xml:space="preserve">
+    <value>Načítání, prosím čekejte...</value>
+  </data>
+  <data name="Buttons.Add" xml:space="preserve">
+    <value>Přidat</value>
+  </data>
+  <data name="Buttons.Cancel" xml:space="preserve">
+    <value>Zrušit</value>
+  </data>
+  <data name="Buttons.Edit" xml:space="preserve">
+    <value>Upravit</value>
+  </data>
+  <data name="Buttons.No" xml:space="preserve">
+    <value>Ne</value>
+  </data>
+  <data name="Buttons.Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Buttons.Sign" xml:space="preserve">
+    <value>Přihlásit</value>
+  </data>
+  <data name="Buttons.Yes" xml:space="preserve">
+    <value>Ano</value>
+  </data>
+  <data name="CategoryModelBase.Name.Header" xml:space="preserve">
+    <value>Název kategorie</value>
+  </data>
+  <data name="ContentDialog.Remove.Header" xml:space="preserve">
+    <value>Odebrat položku?</value>
+  </data>
+  <data name="ContentDialog.Remove.Text" xml:space="preserve">
+    <value>Opravdu si přejete odebrat tuto položku?</value>
+  </data>
+  <data name="LoginControlLoginInput.PlaceholderText" xml:space="preserve">
+    <value>Uživatelské jméno nebo ID</value>
+  </data>
+  <data name="LoginControlLoginText.Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Login_Title.Text" xml:space="preserve">
+    <value>Přihlášení</value>
+  </data>
+  <data name="MenuItem.AppClose" xml:space="preserve">
+    <value>Zavřít aplikaci</value>
+  </data>
+  <data name="MenuItem.Cards" xml:space="preserve">
+    <value>Karty</value>
+  </data>
+  <data name="MenuItem.Customers" xml:space="preserve">
+    <value>Zákazníci</value>
+  </data>
+  <data name="MenuItem.LogIn" xml:space="preserve">
+    <value>Přihlášení</value>
+  </data>
+  <data name="MenuItem.LogOut" xml:space="preserve">
+    <value>Odhlásit</value>
+  </data>
+  <data name="MenuItem.Payments" xml:space="preserve">
+    <value>Platby</value>
+  </data>
+  <data name="MenuItem.Products" xml:space="preserve">
+    <value>Produkty</value>
+  </data>
+  <data name="MenuItem.Reservations" xml:space="preserve">
+    <value>Rezervace</value>
+  </data>
+  <data name="MenuItem.Settings" xml:space="preserve">
+    <value>Nastavení</value>
+  </data>
+  <data name="MenuItem.ShiftClose" xml:space="preserve">
+    <value>Zavřít směnu</value>
+  </data>
+  <data name="MenuItem.ShiftOpen" xml:space="preserve">
+    <value>Otevřít směnu</value>
+  </data>
+  <data name="MenuItem.Shifts" xml:space="preserve">
+    <value>Směny</value>
+  </data>
+  <data name="MenuItem.Statistics" xml:space="preserve">
+    <value>Statistiky</value>
+  </data>
+  <data name="MenuItem.Tables" xml:space="preserve">
+    <value>Stoly</value>
+  </data>
+  <data name="MenuItem.Users" xml:space="preserve">
+    <value>Uživatelé</value>
+  </data>
+  <data name="Settings.SettingsApp.PartName" xml:space="preserve">
+    <value>Aplikace</value>
+  </data>
+  <data name="Settings.SettingsTableCategories.PartName" xml:space="preserve">
+    <value>Kategorie stolů</value>
+  </data>
+  <data name="Settings.SettingsTableInfos.PartName" xml:space="preserve">
+    <value>Specifikace stolů</value>
+  </data>
+  <data name="Settings.SettingsUsers.PartName" xml:space="preserve">
+    <value>Uživatelé</value>
+  </data>
+  <data name="Settings_SettingsPartsHeader.Text" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="TableCategoryDetail_EditButton.Content" xml:space="preserve">
+    <value>Upravit kategorii</value>
+  </data>
+  <data name="TableCategoryDetail_Name.Text" xml:space="preserve">
+    <value>Název kategorie:</value>
+  </data>
+  <data name="TableCategoryDetail_TableCount.Text" xml:space="preserve">
+    <value>Počet stolů v kategorii:</value>
+  </data>
+  <data name="TableCategoryDetail_TableSection.Text" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="TableCategoryDetail_Title.Text" xml:space="preserve">
+    <value>Detaily kategorie stolů</value>
+  </data>
+  <data name="TableCategoryEdit_Title.Text" xml:space="preserve">
+    <value>Kategorie stolů</value>
+  </data>
+  <data name="TableInfoDetailModel.Category.Header" xml:space="preserve">
+    <value>Zařazení v kategorii</value>
+  </data>
+  <data name="TableInfoDetailModel.Name.Header" xml:space="preserve">
+    <value>Označení</value>
+  </data>
+  <data name="TableInfoDetailModel.PositionX.Header" xml:space="preserve">
+    <value>Pozice X</value>
+  </data>
+  <data name="TableInfoDetailModel.PositionY.Header" xml:space="preserve">
+    <value>Pozice Y</value>
+  </data>
+  <data name="TableInfoDetailModel.Size.Header" xml:space="preserve">
+    <value>Velikost</value>
+  </data>
+  <data name="TableInfoDetail_CategoryName.Text" xml:space="preserve">
+    <value>Kategorie:</value>
+  </data>
+  <data name="TableInfoDetail_EditButton.Content" xml:space="preserve">
+    <value>Upravit specifikace</value>
+  </data>
+  <data name="TableInfoDetail_Name.Text" xml:space="preserve">
+    <value>Označení:</value>
+  </data>
+  <data name="TableInfoDetail_Person.Text" xml:space="preserve">
+    <value>osob</value>
+  </data>
+  <data name="TableInfoDetail_Size.Text" xml:space="preserve">
+    <value>Velikost:</value>
+  </data>
+  <data name="TableInfoDetail_TableSection.Text" xml:space="preserve">
+    <value>Stůl</value>
+  </data>
+  <data name="TableInfoDetail_Title.Text" xml:space="preserve">
+    <value>Specifikace stolu</value>
+  </data>
+  <data name="TableInfoEdit_Category.PlaceholderText" xml:space="preserve">
+    <value>Vyberte zařazení v kategorii</value>
+  </data>
+  <data name="TableInfoEdit_Title.Text" xml:space="preserve">
+    <value>Specifikace stolu</value>
+  </data>
+  <data name="TablesView_CategoriesCombo.PlaceholderText" xml:space="preserve">
+    <value>Vyberte plánek stolů</value>
+  </data>
+  <data name="UserDetailModel.NewPassword.Header" xml:space="preserve">
+    <value>Nové heslo</value>
+  </data>
+  <data name="UserDetailModel.NewPassword.Tooltip" xml:space="preserve">
+    <value>Zadejte heslo aspoň 6 znaků dlouhé</value>
+  </data>
+  <data name="UserDetailModel.NewPasswordAgain.Header" xml:space="preserve">
+    <value>Nové heslo znovu</value>
+  </data>
+  <data name="UserDetailModel.Rights.Header" xml:space="preserve">
+    <value>Seznam oprávnění</value>
+  </data>
+  <data name="UserDetail_ChangePassword.Content" xml:space="preserve">
+    <value>Změnit heslo</value>
+  </data>
+  <data name="UserDetail_EditButton.Content" xml:space="preserve">
+    <value>Upravit uživatele</value>
+  </data>
+  <data name="UserDetail_EditRights.Content" xml:space="preserve">
+    <value>Upravit oprávnění</value>
+  </data>
+  <data name="UserDetail_Name.Text" xml:space="preserve">
+    <value>Jméno a příjmené:</value>
+  </data>
+  <data name="UserDetail_Nick.Text" xml:space="preserve">
+    <value>Přihlašovací jméno:</value>
+  </data>
+  <data name="UserDetail_OldPassword.Header" xml:space="preserve">
+    <value>Staré heslo</value>
+  </data>
+  <data name="UserDetail_PasswordSection.Text" xml:space="preserve">
+    <value>Heslo</value>
+  </data>
+  <data name="UserDetail_RightsSection.Text" xml:space="preserve">
+    <value>Oprávnění</value>
+  </data>
+  <data name="UserDetail_Title.Text" xml:space="preserve">
+    <value>Detail uživatele</value>
+  </data>
+  <data name="UserDetail_UserSection.Text" xml:space="preserve">
+    <value>Uživatel</value>
+  </data>
+  <data name="UserEdit_OldPass.Header" xml:space="preserve">
+    <value>Staré heslo</value>
+  </data>
+  <data name="UserEdit_Title.Text" xml:space="preserve">
+    <value>Uživatel</value>
+  </data>
+  <data name="UserListModel.FirstName.Header" xml:space="preserve">
+    <value>Jméno</value>
+  </data>
+  <data name="UserListModel.LastName.Header" xml:space="preserve">
+    <value>Příjmení</value>
+  </data>
+  <data name="UserListModel.NickName.Header" xml:space="preserve">
+    <value>Přihlašovací jméno</value>
+  </data>
+  <data name="Validation.AreNotSame" xml:space="preserve">
+    <value>Vložené hodnoty nejsou stejné.</value>
+  </data>
+  <data name="Validation.BelowZero" xml:space="preserve">
+    <value>Hodnota je menší jak nula.</value>
+  </data>
+  <data name="Validation.DuplicatedValue" xml:space="preserve">
+    <value>Hodnota již existuje.</value>
+  </data>
+  <data name="Validation.NotInserted" xml:space="preserve">
+    <value>Hodnota nebyla vložena.</value>
+  </data>
+  <data name="Validation.NullOrEmpty" xml:space="preserve">
+    <value>Hodnota nebya zadána nebo je prázdný text.</value>
+  </data>
+  <data name="Validation.PasswordIncorrect" xml:space="preserve">
+    <value>Heslo je nesprávné.</value>
+  </data>
+  <data name="Validation.TooShort" xml:space="preserve">
+    <value>Vložená hodnota je příliš krátká.</value>
+  </data>
+  <data name="Validation.ZeroValue" xml:space="preserve">
+    <value>Hodnota je nulová.</value>
+  </data>
+  <data name="Buttons.Logout" xml:space="preserve">
+    <value>Odhlásit</value>
+  </data>
+  <data name="ContentDialog.LogOut.Header" xml:space="preserve">
+    <value>Odhlásit uživatele?</value>
+  </data>
+  <data name="ContentDialog.LogOut.Text" xml:space="preserve">
+    <value>Opravdu si přejete odhlásit aktuálního uživatele?</value>
+  </data>
+  <data name="UserDetailModel.Password.Header" xml:space="preserve">
+    <value>Heslo</value>
+  </data>
+  <data name="Validation.NickPasswordMismatch" xml:space="preserve">
+    <value>Uživatel nebo heslo je nesprávné.</value>
+  </data>
+  <data name="Validation.UserNotExist" xml:space="preserve">
+    <value>Uživatel neexistuje.</value>
+  </data>
+  <data name="ContentDialog.ConfirmLogOut.Header" xml:space="preserve">
+    <value>Odhlásit uživatele "{0}"?</value>
+  </data>
+  <data name="SettingsTableCategories_Add.Content" xml:space="preserve">
+    <value>Přidat kategorii stolů</value>
+  </data>
+  <data name="SettingsTableInfos_Add.Content" xml:space="preserve">
+    <value>Přidat specifikaci stolu</value>
+  </data>
+  <data name="SettingsUsers_Add.Content" xml:space="preserve">
+    <value>Přidat uživatele</value>
+  </data>
+  <data name="ContentDialog.LogOutAllUsers.Header" xml:space="preserve">
+    <value>Všichni uživatelé budou odhlášeni</value>
+  </data>
+  <data name="ContentDialog.LogOutAllUsers.Text" xml:space="preserve">
+    <value>Jelikož není do pokladny přihlášen uživatel, který by byl schopen otevřít směnu, tak budou všichni uživatelé odhlíšeni.</value>
+  </data>
+  <data name="Settings.SettingsApp.DialogCategoryName" xml:space="preserve">
+    <value>Dialogová okna</value>
+  </data>
+  <data name="Settings.SettingsApp.ShowConfirmDialogForLogOut.Header" xml:space="preserve">
+    <value>Zobrazit dialogové okno s potvrzením o odhlášení uživatele.</value>
+  </data>
+  <data name="Settings.SettingsApp.ShowInfoDialogAboutLogOutAllUsers.Header" xml:space="preserve">
+    <value>Zobrazit dialogové okno s informací o odhlášení všech uživatelů.</value>
+  </data>
+  <data name="Switch_OnOff.OffContent" xml:space="preserve">
+    <value>Vypnout</value>
+  </data>
+  <data name="Switch_OnOff.OnContent" xml:space="preserve">
+    <value>Zapnout</value>
+  </data>
+  <data name="ContentDialog.CloseAppLogOut.Header" xml:space="preserve">
+    <value>Další uživatelé jsou přihlášeni</value>
+  </data>
+  <data name="ContentDialog.CloseAppLogOut.Text" xml:space="preserve">
+    <value>Další uživatelé, vyjma vašeho účtu, jsou přihlášen do systému. Chcete je dohlásit a ukončit aplikace?</value>
+  </data>
+  <data name="Settings.SettingsProductCategories.PartName" xml:space="preserve">
+    <value>Kategorie produktů</value>
+  </data>
+  <data name="ProductCategoryDetail_EditButton.Content" xml:space="preserve">
+    <value>Upravit kategorii</value>
+  </data>
+  <data name="ProductCategoryDetail_Name.Text" xml:space="preserve">
+    <value>Název kategorie:</value>
+  </data>
+  <data name="ProductCategoryDetail_ProductCount.Text" xml:space="preserve">
+    <value>Počet produktů v kategorii:</value>
+  </data>
+  <data name="ProductCategoryDetail_ProductSection.Text" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="ProductCategoryDetail_Title.Text" xml:space="preserve">
+    <value>Detaily kategorie produktů</value>
+  </data>
+  <data name="ProductCategoryEdit_Title.Text" xml:space="preserve">
+    <value>Kategorie produktů</value>
+  </data>
+  <data name="SettingsProductCategories_Add.Content" xml:space="preserve">
+    <value>Přidat kategorii produktů</value>
+  </data>
+  <data name="ProductDetail_CategoryName.Text" xml:space="preserve">
+    <value>Kategorie:</value>
+  </data>
+  <data name="ProductDetail_EditButton.Content" xml:space="preserve">
+    <value>Upravit specifikace</value>
+  </data>
+  <data name="ProductDetail_Name.Text" xml:space="preserve">
+    <value>Název:</value>
+  </data>
+  <data name="ProductDetail_Price.Text" xml:space="preserve">
+    <value>Cena:</value>
+  </data>
+  <data name="ProductDetail_ProductSection.Text" xml:space="preserve">
+    <value>Produkt</value>
+  </data>
+  <data name="ProductDetail_Title.Text" xml:space="preserve">
+    <value>Specifikace produktu</value>
+  </data>
+  <data name="ProductEdit_Category.PlaceholderText" xml:space="preserve">
+    <value>Vyberte zařazení v kategorii</value>
+  </data>
+  <data name="ProductEdit_Title.Text" xml:space="preserve">
+    <value>Specifikace produktu</value>
+  </data>
+  <data name="ProductListModel.Category.Header" xml:space="preserve">
+    <value>Zařazení v kategorii</value>
+  </data>
+  <data name="ProductListModel.Name.Header" xml:space="preserve">
+    <value>Název</value>
+  </data>
+  <data name="ProductListModel.Price.Header" xml:space="preserve">
+    <value>Cena</value>
+  </data>
+  <data name="Settings.SettingsProducts.PartName" xml:space="preserve">
+    <value>Produkty</value>
+  </data>
+  <data name="SettingsProducts_Add.Content" xml:space="preserve">
+    <value>Přidat produkt</value>
+  </data>
+  <data name="Table_TableTitle.Text" xml:space="preserve">
+    <value>Stůl</value>
+  </data>
+  <data name="SettingsProducts_ErrorMessage.Text" xml:space="preserve">
+    <value>Pro přidání produktu musíte nejprve přidat kategorii produktů.</value>
+  </data>
+  <data name="SettingsTableInfos_ErrorMessage.Text" xml:space="preserve">
+    <value>Pro přidání specifikace stolu musíte nejprve přidat kategorii stolů.</value>
+  </data>
+  <data name="OpenCloseShift.Close.Ok.Text" xml:space="preserve">
+    <value>Zavřít směnu</value>
+  </data>
+  <data name="OpenCloseShift.Close.Title.Text" xml:space="preserve">
+    <value>Zavřít směnu</value>
+  </data>
+  <data name="OpenCloseShift.Close.UserPlaceholder.Text" xml:space="preserve">
+    <value>Vyberte uživatele k zavření směny</value>
+  </data>
+  <data name="OpenCloseShift.Open.Ok.Text" xml:space="preserve">
+    <value>Otevřít směnu</value>
+  </data>
+  <data name="OpenCloseShift.Open.Title.Text" xml:space="preserve">
+    <value>Otevřít směnu</value>
+  </data>
+  <data name="OpenCloseShift.Open.UserPlaceholder.Text" xml:space="preserve">
+    <value>Vyberte uživatele k otevření směny</value>
+  </data>
+  <data name="ShiftDetailModel.CashValue.Header" xml:space="preserve">
+    <value>Hodnota kasy</value>
+  </data>
+  <data name="ShiftDetailModel.User.Header" xml:space="preserve">
+    <value>Uživatel</value>
+  </data>
+  <data name="ProductListModel.VatLevel.Header" xml:space="preserve">
+    <value>Sazba DPH</value>
+  </data>
+  <data name="VatLevel.Base_2021" xml:space="preserve">
+    <value>Základní sazba DPH</value>
+  </data>
+  <data name="VatLevel.FirstLower_2021" xml:space="preserve">
+    <value>První snížená sazba DPH</value>
+  </data>
+  <data name="VatLevel.SecondLower_2021" xml:space="preserve">
+    <value>Druhá snížená sazba DPH</value>
+  </data>
+  <data name="ProductCategoryDetail_PrintSeparately.Text" xml:space="preserve">
+    <value>Tisknout položky odděleně:</value>
+  </data>
+  <data name="ProductCategoryModel.PrintSeparately.Header" xml:space="preserve">
+    <value>Tisknout položky z této kategorie odděleně</value>
+  </data>
+  <data name="ProductDetail_VatLevel.Text" xml:space="preserve">
+    <value>Sazba DPH:</value>
+  </data>
+  <data name="ProductEdit_VatLevel.Header" xml:space="preserve">
+    <value>Sazba DPH</value>
+  </data>
+  <data name="ProductEdit_VatLevel.PlaceholderText" xml:space="preserve">
+    <value>Zadejte sazbu DPH</value>
+  </data>
+  <data name="GoBack.Content" xml:space="preserve">
+    <value>Zpět</value>
+  </data>
+  <data name="Settings.SettingsApp.PasswordCategoryName" xml:space="preserve">
+    <value>Hesla</value>
+  </data>
+  <data name="Settings.SettingsApp.ShowPasswordForLogin.Header" xml:space="preserve">
+    <value>Zobrazit heslo při přihlašování</value>
+  </data>
+  <data name="Sell_Discount.Text" xml:space="preserve">
+    <value>Sleva</value>
+  </data>
+  <data name="Table_Pay.Content" xml:space="preserve">
+    <value>Zaplatit</value>
+  </data>
+  <data name="Table_Products.Text" xml:space="preserve">
+    <value>Produkty</value>
+  </data>
+  <data name="Table_Sells.Text" xml:space="preserve">
+    <value>Prodeje</value>
+  </data>
+  <data name="VatLevel.None" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="TableProductSellEdit_Discount.Header" xml:space="preserve">
+    <value>Sleva pro produkt</value>
+  </data>
+  <data name="TableProductSellEdit_SellCount.Header" xml:space="preserve">
+    <value>Počet prodejů produktu</value>
+  </data>
+  <data name="TableProductSellEdit_Title.Text" xml:space="preserve">
+    <value>Aktualizace prodejů pro stůl</value>
+  </data>
+  <data name="TableSellSplit_SplitCount.Header" xml:space="preserve">
+    <value>Počet rozdělení</value>
+  </data>
+  <data name="TableSellSplit_Title.Text" xml:space="preserve">
+    <value>Rozdělit prodeje produktu</value>
+  </data>
+  <data name="Payment_Title.Text" xml:space="preserve">
+    <value>Platba stolu</value>
+  </data>
+  <data name="Payment_Discount.Text" xml:space="preserve">
+    <value>Sleva: </value>
+  </data>
+  <data name="Payment_FinishPayment.Text" xml:space="preserve">
+    <value>Dokončení platby</value>
+  </data>
+  <data name="Payment_NextInfo.Text" xml:space="preserve">
+    <value>Další informace</value>
+  </data>
+  <data name="Payment_Note.Header" xml:space="preserve">
+    <value>Poznámka:</value>
+  </data>
+  <data name="Payment_Note.PlaceholderText" xml:space="preserve">
+    <value>Vložte poznámku k platbě</value>
+  </data>
+  <data name="Payment_PaymentBankCard.Content" xml:space="preserve">
+    <value>Platební karta</value>
+  </data>
+  <data name="Payment_PaymentCash.Content" xml:space="preserve">
+    <value>Hotovost</value>
+  </data>
+  <data name="Payment_PaymentSummary.Text" xml:space="preserve">
+    <value>Souhrn platby</value>
+  </data>
+  <data name="Payment_PaymentType.Text" xml:space="preserve">
+    <value>Typ platby:</value>
+  </data>
+  <data name="Payment_Price.Text" xml:space="preserve">
+    <value>Cena:</value>
+  </data>
+  <data name="Payment_PriceAfterDiscount.Text" xml:space="preserve">
+    <value>Cena po slevě: </value>
+  </data>
+  <data name="Payment_SellsOnTable.Text" xml:space="preserve">
+    <value>Prodeje na stole</value>
+  </data>
+  <data name="Payment_SellsToPay.Text" xml:space="preserve">
+    <value>Prodeje k platbě</value>
+  </data>
+  <data name="Payment_Pay.Content" xml:space="preserve">
+    <value>Zaplatit</value>
+  </data>
+  <data name="Payment_Split.Content" xml:space="preserve">
+    <value>Rozdělit účet</value>
+  </data>
+</root>

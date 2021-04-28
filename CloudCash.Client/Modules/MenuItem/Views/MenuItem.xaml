@@ -1,0 +1,139 @@
+﻿<UserControl
+    x:Class="CloudCash.Client.Modules.MenuItem.Views.MenuItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:conv="using:CloudCash.Client.Converters"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <conv:BoolToVisibilityConverter x:Key="BoolToVisibility"/>
+        <conv:BoolToMenuItemSizeConverter x:Key="BoolToMenuItemSizeConverter"/>
+        <conv:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <!--<ThemeShadow x:Name="SharedShadow" />-->
+
+        <conv:ValueWhenConverter x:Key="IsIconSizeWidgetDataVisibilityConverter">
+            <conv:ValueWhenConverter.When>
+                <x:Boolean>True</x:Boolean>
+            </conv:ValueWhenConverter.When>
+            <conv:ValueWhenConverter.Value>
+                <Visibility>Collapsed</Visibility>
+            </conv:ValueWhenConverter.Value>
+            <conv:ValueWhenConverter.Otherwise>
+                <Visibility>Visible</Visibility>
+            </conv:ValueWhenConverter.Otherwise>
+        </conv:ValueWhenConverter>
+
+        <conv:ValueWhenConverter x:Key="IsIconSizeHorizontalAlignmentConverter">
+            <conv:ValueWhenConverter.When>
+                <x:Boolean>True</x:Boolean>
+            </conv:ValueWhenConverter.When>
+            <conv:ValueWhenConverter.Value>
+                <HorizontalAlignment>Left</HorizontalAlignment>
+            </conv:ValueWhenConverter.Value>
+            <conv:ValueWhenConverter.Otherwise>
+                <HorizontalAlignment>Stretch</HorizontalAlignment>
+            </conv:ValueWhenConverter.Otherwise>
+        </conv:ValueWhenConverter>
+
+        <conv:ValueWhenConverter x:Key="IsIconSizeSeparatorVisibilityConverter">
+            <conv:ValueWhenConverter.When>
+                <x:Boolean>True</x:Boolean>
+            </conv:ValueWhenConverter.When>
+            <conv:ValueWhenConverter.Value>
+                <GridLength>0</GridLength>
+            </conv:ValueWhenConverter.Value>
+            <conv:ValueWhenConverter.Otherwise>
+                <GridLength>1</GridLength>
+            </conv:ValueWhenConverter.Otherwise>
+        </conv:ValueWhenConverter>
+    </UserControl.Resources>
+
+    <Button x:Name="MenuItemContainer"
+                Padding="4 8"
+                HorizontalAlignment="{Binding IsIconSize, Converter={StaticResource IsIconSizeHorizontalAlignmentConverter}}"
+                VerticalAlignment="Stretch"
+                HorizontalContentAlignment="Stretch"
+                Height="{Binding IsWidgetTypeSize, Converter={StaticResource BoolToMenuItemSizeConverter}}"
+                Command="{Binding NavigationCommand}">
+
+        <Grid>
+
+            <Grid Visibility="{Binding IsWidgetTypeSize, Converter={StaticResource BoolToVisibility}}">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="82"/>
+                    <ColumnDefinition Width="{Binding IsIconSize, Converter={StaticResource IsIconSizeSeparatorVisibilityConverter}}"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Margin="0 0 0 6"
+                               HorizontalAlignment="Center"
+                               Text="{Binding Icon}"/>
+
+                    <Rectangle Grid.Row="1"
+                               Margin="8 0"
+                               Fill="Black"/>
+
+                    <TextBlock Grid.Row="2"
+                               Margin="0 6 0 0"
+                               HorizontalAlignment="Center"
+                               Text="{Binding Title}"
+                               FontWeight="Bold"/>
+
+                </Grid>
+
+                <Rectangle Grid.Column="1"
+                           Fill="Black"/>
+
+                <Grid Grid.Column="2"
+                      Margin="8 0 0 0"
+                      Visibility="{Binding IsIconSize, Converter={StaticResource IsIconSizeWidgetDataVisibilityConverter}}">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="16"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="{Binding WidgetLine1Text}"/>
+
+                    <TextBlock Grid.Row="2"
+                               Text="{Binding WidgetLine2Text}"/>
+                </Grid>
+            </Grid>
+
+            <Grid Visibility="{Binding IsWidgetTypeSize, Converter={StaticResource BoolToVisibility}, ConverterParameter=not}"
+                  VerticalAlignment="Center">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="42"/>
+                    <ColumnDefinition Width="1"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock HorizontalAlignment="Center"
+                           Text="{Binding Icon}"/>
+
+                <Rectangle Grid.Column="1"
+                           Fill="Black"/>
+
+                <TextBlock Grid.Column="2"
+                           Margin="8 0 0 0"
+                           HorizontalAlignment="Left"
+                           Text="{Binding Title}"
+                           FontWeight="Bold"/>
+            </Grid>
+
+        </Grid>
+    </Button>
+</UserControl>

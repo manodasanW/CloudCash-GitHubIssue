@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CloudCash.Client": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false,
+      "remoteDebugMachine": "127.0.0.1",
+      "authenticationMode": "Windows"
+    }
+  }
+}

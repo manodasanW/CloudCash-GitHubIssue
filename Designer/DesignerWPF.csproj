@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Configurations>Debug;Release;Debug_WPF;Debug_UWP;Test;All</Configurations>
+    <XamlDebuggingInformation>True</XamlDebuggingInformation>
+    <StartupObject>Designer.App</StartupObject>
+  </PropertyGroup>
+
+</Project>

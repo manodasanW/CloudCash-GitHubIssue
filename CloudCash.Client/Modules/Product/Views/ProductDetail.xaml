@@ -1,0 +1,86 @@
+﻿<Page x:Class="CloudCash.Client.Modules.Product.Views.ProductDetail"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:CloudCash.Client.Modules.Product.Views"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:controls="using:CloudCash.Client.Controls" 
+      xmlns:converters="using:CloudCash.Client.Converters"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      DataContext="{Binding Source={StaticResource VMLocator}, Path=ProductDetailVM}">
+
+    <Page.Resources>
+        <converters:EnumToVatValueConverter x:Key="EnumToVatValueConverter"/>
+        <converters:EnumToLocalizedStringConverter x:Key="EnumToLocalizedStringConverter"/>
+        <converters:PropertyStringValueToLocalizedStringConverter x:Key="PropertyStringValueToLocalizedStringConverter"/>
+    </Page.Resources>
+    
+    <Grid>
+        <StackPanel Margin="24">
+            <TextBlock x:Uid="ProductDetail_Title"
+                       Style="{StaticResource HeaderTextBlockStyle}"/>
+
+            <TextBlock x:Uid="ProductDetail_ProductSection"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       Margin="0 16 0 0"/>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 8 0 0">
+
+                <TextBlock x:Uid="ProductDetail_Name"
+                           Style="{StaticResource BaseTextBlockStyle}"/>
+
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}"
+                           Margin="4 0 0 0"                       
+                           Text="{Binding ProductData.Name}"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 8 0 0">
+
+                <TextBlock x:Uid="ProductDetail_Price"
+                           Style="{StaticResource BaseTextBlockStyle}"/>
+
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}"
+                           Margin="4 0 0 0">
+                    <Run Text="{Binding ProductData.Price}"/> Kč
+                </TextBlock>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 8 0 0">
+
+                <TextBlock x:Uid="ProductDetail_VatLevel"
+                           Style="{StaticResource BaseTextBlockStyle}"/>
+
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}"
+                           Margin="4 0 0 0">                    
+                        <Run Text="{Binding ProductData.VatLevel, Converter={StaticResource EnumToLocalizedStringConverter}}"/>
+                        (<Run Text="{Binding ProductData.VatLevel, Converter={StaticResource EnumToVatValueConverter}}"/> %)
+                </TextBlock>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 8 0 0">
+
+                <TextBlock x:Uid="ProductDetail_CategoryName"
+                           Style="{StaticResource BaseTextBlockStyle}"/>
+
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}"
+                           Margin="4 0 0 0"
+                           Text="{Binding ProductData.Category.Name}"/>
+            </StackPanel>
+
+            <Button x:Uid="ProductDetail_EditButton"
+                    Margin="0 8 0 0"
+                    Command="{Binding UpdateProductCommand}"
+                    CommandParameter="{Binding ProductData}"/>
+        </StackPanel>
+
+        <controls:BusyOverlay IsBusy="{Binding IsBusy}"/>
+    </Grid>
+</Page>

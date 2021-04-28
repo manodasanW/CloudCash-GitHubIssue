@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <None Update="App.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <Page Update="Modules\Payment\Views\Payment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Sell\Controls\TableProductSellEdit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Sell\Controls\TableSellSplit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Shift\Controls\OpenCloseShift.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Shift\Controls\CloseShift.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Shift\Controls\OpenShift.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\ProductSelector\Views\ProductSelector.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Settings\Views\SettingsProducts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Product\Views\ProductDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Product\Components\ProductEdit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\ProductCategory\Views\ProductCategoryDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\ProductCategory\Components\ProductCategoryEdit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Settings\Views\SettingsProductCategories.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Table\Views\Table.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\AppWindow\Views\WelcomeImage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\AppWindow\Views\AppWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Login\Views\LoginPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\ValidationMessage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Settings\Views\SettingsTableInfos.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\BusyOverlay.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Settings\Views\SettingsTableCategories.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Settings\Views\SettingsApp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\Settings\Views\Settings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\TablesView\Views\TablesView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\MenuItem\Views\MenuControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\MenuItem\Views\MenuItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

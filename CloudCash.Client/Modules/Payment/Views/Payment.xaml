@@ -1,0 +1,365 @@
+﻿<Page x:Name="PaymentPage"
+      x:Class="CloudCash.Client.Modules.Payment.Views.Payment"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:CloudCash.Client.Modules.Payment.Views"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:productSelector="using:CloudCash.Client.Modules.ProductSelector.Views"
+      xmlns:controls="using:CloudCash.Client.Controls"
+      xmlns:communityWinUI="using:Microsoft.Toolkit.Uwp.UI.Controls"
+      xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+      xmlns:ui="using:Microsoft.Xaml.Interactions.Core" 
+      xmlns:converters="using:CloudCash.Client.Converters"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      DataContext="{Binding Source={StaticResource VMLocator}, Path=PaymentVM}">
+
+    <Page.Resources>
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+
+        <converters:ValueWhenConverter x:Key="IsSplitVisible">
+            <converters:ValueWhenConverter.When>
+                <x:Boolean>True</x:Boolean>
+            </converters:ValueWhenConverter.When>
+            <converters:ValueWhenConverter.Value>
+                <GridLength>350</GridLength>
+            </converters:ValueWhenConverter.Value>
+            <converters:ValueWhenConverter.Otherwise>
+                <GridLength>0</GridLength>
+            </converters:ValueWhenConverter.Otherwise>
+        </converters:ValueWhenConverter>
+    </Page.Resources>
+
+    <interactivity:Interaction.Behaviors>
+        <ui:EventTriggerBehavior EventName="Loaded">
+            <ui:InvokeCommandAction Command="{Binding PageLoadedCommand}"
+                                    CommandParameter="{x:Bind Path=PaymentPage}"/>
+        </ui:EventTriggerBehavior>
+    </interactivity:Interaction.Behaviors>
+
+    <Grid Padding="24 24 24 24"
+          RowSpacing="12"
+          ColumnSpacing="24">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="{Binding ShowSplitTable, Converter={StaticResource IsSplitVisible}}"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.ColumnSpan="3"
+                   Margin="0 0 0 12"
+                   Style="{StaticResource HeaderTextBlockStyle}">
+            <Run x:Uid="Payment_Title"/> <Run Text="{Binding TableInfo.TableInfo.Name}"/>
+        </TextBlock>
+
+        <TextBlock x:Uid="Payment_SellsOnTable"
+                   Grid.Row="1"
+                   Style="{StaticResource TitleTextBlockStyle}"/>
+
+        <ListView x:Name="SellsOnTableList"
+                  Grid.Row="2"
+                  Padding="0 0 0 12"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  SelectionMode="None"
+                  ItemsSource="{Binding SellsOnTable, UpdateSourceTrigger=PropertyChanged}">
+
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" 
+                            Value="Stretch"/>
+                    
+                    <Setter Property="Padding" 
+                            Value="0 0 20 0"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="4 6 0 0">
+                        <communityWinUI:DropShadowPanel HorizontalContentAlignment="Stretch"
+                                                        ShadowOpacity="{StaticResource ShadowOpacity}">
+                            
+                            <Grid Background="White"
+                                  CornerRadius="4"
+                                  Padding="16 8 16 16">
+                                
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                
+                                <TextBlock Grid.Row="0"
+                                           Style="{StaticResource SubtitleTextBlockStyle}"
+                                           Text="{Binding Product.Name, UpdateSourceTrigger=PropertyChanged}"/>
+                                
+                                <TextBlock Grid.Row="1"
+                                           Margin="0 4 0 0">
+                                    <Run x:Uid="Sell_Discount"/> <Run Text="{Binding Discount, UpdateSourceTrigger=PropertyChanged}"/> %
+                                </TextBlock>
+                                
+                                <TextBlock Grid.Column="1"
+                                           Margin="0 4 0 0"
+                                           Style="{StaticResource BaseTextBlockStyle}">
+                                    <Run Text="{Binding SpendedCash, UpdateSourceTrigger=PropertyChanged}"/> Kč
+                                </TextBlock>
+                                
+                                <TextBlock Grid.Column="1"
+                                           Grid.Row="1"
+                                           Margin="0 4 0 0"
+                                           VerticalAlignment="Bottom"
+                                           HorizontalAlignment="Right">                                        
+                                    <Run Text="{Binding SellCount, UpdateSourceTrigger=PropertyChanged}"/> Ks
+                                </TextBlock>
+                                
+                                <Grid Grid.Row="2"
+                                      Grid.ColumnSpan="2"
+                                      Visibility="{Binding ElementName=SellsOnTableList, Path=DataContext.ShowSplitTable, Converter={StaticResource BoolToVisibilityConverter}}"
+                                      Margin="0 12 0 0">
+                                    
+                                    <StackPanel HorizontalAlignment="Right"
+                                                Orientation="Horizontal">
+                                        
+                                        <Button Margin="8 0 0 0" 
+                                                Content=">>"
+                                                Command="{Binding ElementName=SellsOnTableList, Path=DataContext.AddProductToPayCommand}"
+                                                CommandParameter="{Binding}"/>
+                                        
+                                        <Button Margin="8 0 0 0" 
+                                                Content=">"
+                                                Command="{Binding ElementName=SellsOnTableList, Path=DataContext.AddSellToPayCommand}"
+                                                CommandParameter="{Binding}"/>
+                                        
+                                    </StackPanel>
+                                </Grid>
+                                
+                            </Grid>
+                        </communityWinUI:DropShadowPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <TextBlock x:Uid="Payment_SellsToPay" 
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Visibility="{Binding ShowSplitTable, Converter={StaticResource BoolToVisibilityConverter}}"
+                   Style="{StaticResource TitleTextBlockStyle}"/>
+        
+        <ListView x:Name="SellsToPayList"
+                  Grid.Row="2"
+                  Grid.Column="1"
+                  Padding="0 0 0 12"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  SelectionMode="None"
+                  Visibility="{Binding ShowSplitTable, Converter={StaticResource BoolToVisibilityConverter}}"
+                  ItemsSource="{Binding SellsToPay, UpdateSourceTrigger=PropertyChanged}">
+            
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" 
+                            Value="Stretch"/>
+                    
+                    <Setter Property="Padding" 
+                            Value="0 0 20 0"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="4 6 0 0">
+                        <communityWinUI:DropShadowPanel HorizontalContentAlignment="Stretch"
+                                                        ShadowOpacity="{StaticResource ShadowOpacity}">
+                            
+                            <Grid Background="White"
+                                  CornerRadius="4"
+                                  Padding="16 8 16 16">
+                                
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                
+                                <TextBlock Grid.Row="0"
+                                           Style="{StaticResource SubtitleTextBlockStyle}"
+                                           Text="{Binding Product.Name, UpdateSourceTrigger=PropertyChanged}"/>
+                                
+                                <TextBlock Grid.Row="1"
+                                           Margin="0 4 0 0">
+                                    <Run x:Uid="Sell_Discount"/> <Run Text="{Binding Discount, UpdateSourceTrigger=PropertyChanged}"/> %
+                                </TextBlock>
+                                
+                                <TextBlock Grid.Column="1"
+                                           Margin="0 4 0 0"
+                                           Style="{StaticResource BaseTextBlockStyle}">
+                                        <Run Text="{Binding SpendedCash, UpdateSourceTrigger=PropertyChanged}"/> Kč
+                                </TextBlock>
+
+                                <TextBlock Grid.Column="1"
+                                           Grid.Row="1"
+                                           Margin="0 4 0 0"
+                                           VerticalAlignment="Bottom"
+                                           HorizontalAlignment="Right">                                        
+                                    <Run Text="{Binding SellCount, UpdateSourceTrigger=PropertyChanged}"/> Ks
+                                </TextBlock>
+                                
+                                <Grid Grid.Row="2"
+                                      Grid.ColumnSpan="2"
+                                      Margin="0 12 0 0">
+                                    
+                                    <StackPanel HorizontalAlignment="Left"
+                                                Orientation="Horizontal">
+                                        
+                                        <Button Margin="8 0 0 0" 
+                                                Content="&lt;"
+                                                Command="{Binding ElementName=SellsToPayList, Path=DataContext.RemoveSellFromPayCommand}"
+                                                CommandParameter="{Binding}"/>
+                                        
+                                        <Button Margin="8 0 0 0" 
+                                                Content="&lt;&lt;"
+                                                Command="{Binding ElementName=SellsToPayList, Path=DataContext.RemoveProductToPayCommand}"
+                                                CommandParameter="{Binding}"/>
+                                        
+                                    </StackPanel>
+                                </Grid>
+                                
+                            </Grid>
+                        </communityWinUI:DropShadowPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <StackPanel Grid.Row="1"
+                    Grid.Column="2"
+                    Grid.RowSpan="2"
+                    MaxWidth="500"
+                    HorizontalAlignment="Left">
+            
+            <TextBlock x:Uid="Payment_PaymentSummary"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       Margin="0 12 0 0"/>
+            
+            <StackPanel Margin="0 12 0 0"
+                        Orientation="Horizontal">
+                
+                <TextBlock x:Uid="Payment_Price"
+                           Style="{StaticResource BaseTextBlockStyle}"/>
+                
+                <TextBlock Margin="4 0 0 0">
+                    <Run Text="{Binding PriceToPay}"/> Kč
+                </TextBlock>
+                
+            </StackPanel>
+            
+            <StackPanel Margin="0 12 0 0"
+                        Orientation="Horizontal">
+
+                <TextBlock x:Uid="Payment_Discount"
+                           Foreground="Red"
+                           Style="{StaticResource BaseTextBlockStyle}"/>
+
+                <TextBlock Margin="4 0 0 0"
+                           Foreground="Red">
+                    <Run Text="{Binding Discount}"/> %
+                </TextBlock>
+
+            </StackPanel>
+
+            <TextBlock Margin="0 12 0 0"
+                       Style="{StaticResource BaseTextBlockStyle}"
+                       FontSize="16">
+                
+                <Run x:Uid="Payment_PriceAfterDiscount"/> <Run Text="{Binding PaymentInfo.Price}"/> Kč
+
+            </TextBlock>
+
+            <TextBlock x:Uid="Payment_NextInfo"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       Margin="0 48 0 0"/>
+
+            <TextBox x:Uid="Payment_Note"
+                     Margin="0 12 0 0"
+                     Text="{Binding PaymentInfo.Note, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock x:Uid="Payment_FinishPayment"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       Margin="0 48 0 0"/>
+
+            <TextBlock x:Uid="Payment_PaymentType"
+                       Margin="0 12 0 0"/>
+
+            <RadioButton x:Uid="Payment_PaymentCash"
+                         GroupName="PaymentType"
+                         Margin="0 4 0 0"
+                         IsChecked="{Binding SelectedPaymentType[0], Mode=TwoWay}"/>
+
+            <RadioButton x:Uid="Payment_PaymentBankCard"
+                         GroupName="PaymentType"
+                         IsChecked="{Binding SelectedPaymentType[1], Mode=TwoWay}"/>
+
+        </StackPanel>
+
+        <Button x:Uid="GoBack"
+                Grid.Row="3"
+                Height="50"
+                FontWeight="Normal"
+                Command="{Binding GoBackCommand}"
+                HorizontalAlignment="Stretch"/>
+
+        <Grid Grid.Row="3"
+              Grid.Column="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Uid="Payment_Split"
+                    HorizontalAlignment="Left"
+                    Height="50"
+                    Width="250"
+                    Visibility="{Binding ShowSplitTable, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=not}"
+                    Command="{Binding SwitchToSplitTableCommand}"/>
+
+            <Button x:Uid="Payment_Pay"
+                    Grid.Column="1"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Right"
+                    Height="50"
+                    Width="250"
+                    IsEnabled="{Binding IsPayEnabled}"
+                    Command="{Binding PayCommand}"/>
+
+        </Grid>
+
+        <controls:BusyOverlay Grid.ColumnSpan="3"
+                              Grid.RowSpan="4"
+                              Margin="-24"
+                              Visibility="Collapsed"
+                              IsBusy="{Binding IsBusy}"/>
+
+    </Grid>
+</Page>

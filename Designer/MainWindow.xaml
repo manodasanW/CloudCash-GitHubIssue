@@ -1,0 +1,77 @@
+﻿<Window x:Class="Designer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Designer"
+        mc:Ignorable="d"
+        FontSize="20"
+        Title="MainWindow" Height="120" Width="405">
+    
+    <Grid Margin="8">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="99"/>
+            <ColumnDefinition Width="8"/>
+            <ColumnDefinition Width="1"/>
+            <ColumnDefinition Width="8"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="8"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="8"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!--<FluentIcon Grid.Row="1" 
+                        Key="Ticket_24_Regular"
+                        HorizontalAlignment="Center"/>-->
+
+            <TextBlock Grid.Row="1"
+                       FontFamily="Segoe MDL2 Assets"
+                       Text=""
+                       HorizontalAlignment="Center"/>
+
+            <Border Grid.Row="3" 
+                    BorderThickness="1"
+                    BorderBrush="black"/>
+
+            <TextBlock Grid.Row="5" 
+                       HorizontalAlignment="Center">
+                <Run FontWeight="Bold" Text="Rezervace"/>
+            </TextBlock>
+
+        </Grid>
+
+        <Border Grid.Column="2"
+                BorderThickness="1"
+                BorderBrush="black"/>
+
+        <Grid Grid.Column="4">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="12"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1"
+                       FontSize="16"
+                       Text="Nejbližší rezervace: 22:22"/>
+
+            <TextBlock Grid.Row="3"
+                       FontSize="16"
+                       Text="Rezervací dnes: 222"/>
+        </Grid>
+
+    </Grid>
+</Window>

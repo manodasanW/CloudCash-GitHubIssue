@@ -1,0 +1,64 @@
+﻿<Page x:Class="CloudCash.Client.Modules.TableInfo.Views.TableInfoDetail"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:CloudCash.Client.Modules.TableInfo.Views"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:controls="using:CloudCash.Client.Controls"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      DataContext="{Binding Source={StaticResource VMLocator}, Path=TableInfoDetailVM}">
+
+    <Grid>
+        <StackPanel Margin="24">
+            <TextBlock x:Uid="TableInfoDetail_Title"
+                       Style="{StaticResource HeaderTextBlockStyle}"/>
+
+            <TextBlock x:Uid="TableInfoDetail_TableSection"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       Margin="0 16 0 0"/>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 8 0 0">
+
+                <TextBlock x:Uid="TableInfoDetail_Name"
+                           Style="{StaticResource BaseTextBlockStyle}"/>
+
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}"
+                           Margin="4 0 0 0"                       
+                           Text="{Binding TableInfoData.Name}"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                    Margin="0 8 0 0">
+
+                <TextBlock x:Uid="TableInfoDetail_Size"
+                           Style="{StaticResource BaseTextBlockStyle}"/>
+
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}"  
+                           Margin="4 0 0 0">
+                    <Run Text="{Binding TableInfoData.Size}"/> <Run x:Uid="TableInfoDetail_Person"/>
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 8 0 0">
+
+                <TextBlock x:Uid="TableInfoDetail_CategoryName"
+                           Style="{StaticResource BaseTextBlockStyle}"/>
+
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}"
+                           Margin="4 0 0 0"
+                           Text="{Binding TableInfoData.Category.Name}"/>
+            </StackPanel>
+
+            <Button x:Uid="TableInfoDetail_EditButton"
+                    Margin="0 8 0 0"
+                    Command="{Binding UpdateTableInfoCommand}"
+                    CommandParameter="{Binding TableInfoData}"/>
+        </StackPanel>
+
+        <controls:BusyOverlay IsBusy="{Binding IsBusy}"/>
+    </Grid>
+</Page>

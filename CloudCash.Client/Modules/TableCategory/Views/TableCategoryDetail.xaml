@@ -1,0 +1,52 @@
+﻿<Page x:Class="CloudCash.Client.Modules.TableCategory.Views.TableCategoryDetail"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:CloudCash.Client.Modules.TableCategory.Views"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:controls="using:CloudCash.Client.Controls"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      DataContext="{Binding Source={StaticResource VMLocator}, Path=TableCategoryDetailVM}">
+
+    <Grid>
+        <StackPanel Margin="24">
+            <TextBlock x:Uid="TableCategoryDetail_Title" 
+                   Style="{StaticResource HeaderTextBlockStyle}"/>
+
+            <TextBlock x:Uid="TableCategoryDetail_TableSection"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       Margin="0 16 0 0"/>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 8 0 0">
+
+                <TextBlock x:Uid="TableCategoryDetail_Name"
+                           Style="{StaticResource BaseTextBlockStyle}"/>
+
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}"
+                           Margin="4 0 0 0"                       
+                           Text="{Binding TableCategoryData.Name}"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 8 0 0">
+
+                <TextBlock x:Uid="TableCategoryDetail_TableCount"
+                           Style="{StaticResource BaseTextBlockStyle}"/>
+
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}"  
+                           Margin="4 0 0 0"                       
+                           Text="{Binding TablesInCategoryCount}"/>
+            </StackPanel>
+
+            <Button x:Uid="TableCategoryDetail_EditButton"
+                    Margin="0 8 0 0"
+                    Command="{Binding UpdateTableCategoryCommand}"
+                    CommandParameter="{Binding TableCategoryData}"/>
+        </StackPanel>
+
+        <controls:BusyOverlay IsBusy="{Binding IsBusy}"/>
+    </Grid>
+</Page>

@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>CloudCash</value>
+  </data>
+  <data name="BusyOverlay_Message.Text" xml:space="preserve">
+    <value>Loading, please wait...</value>
+  </data>
+  <data name="Buttons.Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Buttons.Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Buttons.Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Buttons.No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Buttons.Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Buttons.Sign" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="Buttons.Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="CategoryModelBase.Name.Header" xml:space="preserve">
+    <value>Category name</value>
+  </data>
+  <data name="ContentDialog.Remove.Header" xml:space="preserve">
+    <value>Remove item?</value>
+  </data>
+  <data name="ContentDialog.Remove.Text" xml:space="preserve">
+    <value>Do you really want to remove this item?</value>
+  </data>
+  <data name="LoginControlLoginInput.PlaceholderText" xml:space="preserve">
+    <value>Username or ID</value>
+  </data>
+  <data name="LoginControlLoginText.Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Login_Title.Text" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="MenuItem.AppClose" xml:space="preserve">
+    <value>Close app</value>
+  </data>
+  <data name="MenuItem.Cards" xml:space="preserve">
+    <value>Cards</value>
+  </data>
+  <data name="MenuItem.Customers" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="MenuItem.LogIn" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="MenuItem.LogOut" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="MenuItem.Payments" xml:space="preserve">
+    <value>Payments</value>
+  </data>
+  <data name="MenuItem.Products" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="MenuItem.Reservations" xml:space="preserve">
+    <value>Reservations</value>
+  </data>
+  <data name="MenuItem.Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="MenuItem.ShiftClose" xml:space="preserve">
+    <value>Close shift</value>
+  </data>
+  <data name="MenuItem.ShiftOpen" xml:space="preserve">
+    <value>Open shift</value>
+  </data>
+  <data name="MenuItem.Shifts" xml:space="preserve">
+    <value>Shifts</value>
+  </data>
+  <data name="MenuItem.Statistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="MenuItem.Tables" xml:space="preserve">
+    <value>Tables</value>
+  </data>
+  <data name="MenuItem.Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="Settings.SettingsApp.PartName" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="Settings.SettingsTableCategories.PartName" xml:space="preserve">
+    <value>Table categories</value>
+  </data>
+  <data name="Settings.SettingsTableInfos.PartName" xml:space="preserve">
+    <value>Specifications of tables</value>
+  </data>
+  <data name="Settings.SettingsUsers.PartName" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="Settings_SettingsPartsHeader.Text" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="TableCategoryDetail_EditButton.Content" xml:space="preserve">
+    <value>Edit category</value>
+  </data>
+  <data name="TableCategoryDetail_Name.Text" xml:space="preserve">
+    <value>Category name:</value>
+  </data>
+  <data name="TableCategoryDetail_TableCount.Text" xml:space="preserve">
+    <value>Number of tables in category:</value>
+  </data>
+  <data name="TableCategoryDetail_TableSection.Text" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="TableCategoryDetail_Title.Text" xml:space="preserve">
+    <value>Table category details</value>
+  </data>
+  <data name="TableCategoryEdit_Title.Text" xml:space="preserve">
+    <value>Table category</value>
+  </data>
+  <data name="TableInfoDetailModel.Category.Header" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="TableInfoDetailModel.Name.Header" xml:space="preserve">
+    <value>Table name</value>
+  </data>
+  <data name="TableInfoDetailModel.PositionX.Header" xml:space="preserve">
+    <value>Position X</value>
+  </data>
+  <data name="TableInfoDetailModel.PositionY.Header" xml:space="preserve">
+    <value>Position Y</value>
+  </data>
+  <data name="TableInfoDetailModel.Size.Header" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="TableInfoDetail_CategoryName.Text" xml:space="preserve">
+    <value>Category:</value>
+  </data>
+  <data name="TableInfoDetail_EditButton.Content" xml:space="preserve">
+    <value>Edit specifications</value>
+  </data>
+  <data name="TableInfoDetail_Name.Text" xml:space="preserve">
+    <value>Table name:</value>
+  </data>
+  <data name="TableInfoDetail_Person.Text" xml:space="preserve">
+    <value>people</value>
+  </data>
+  <data name="TableInfoDetail_Size.Text" xml:space="preserve">
+    <value>Size:</value>
+  </data>
+  <data name="TableInfoDetail_TableSection.Text" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="TableInfoDetail_Title.Text" xml:space="preserve">
+    <value>Table specifications</value>
+  </data>
+  <data name="TableInfoEdit_Category.PlaceholderText" xml:space="preserve">
+    <value>Select table category</value>
+  </data>
+  <data name="TableInfoEdit_Title.Text" xml:space="preserve">
+    <value>Specifications of table</value>
+  </data>
+  <data name="TablesView_CategoriesCombo.PlaceholderText" xml:space="preserve">
+    <value>Select tables plan</value>
+  </data>
+  <data name="UserDetailModel.NewPassword.Header" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="UserDetailModel.NewPassword.Tooltip" xml:space="preserve">
+    <value>Insert password at least 6 characters long</value>
+  </data>
+  <data name="UserDetailModel.NewPasswordAgain.Header" xml:space="preserve">
+    <value>New password again</value>
+  </data>
+  <data name="UserDetailModel.Rights.Header" xml:space="preserve">
+    <value>List of rights</value>
+  </data>
+  <data name="UserDetail_ChangePassword.Content" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="UserDetail_EditButton.Content" xml:space="preserve">
+    <value>Edit user</value>
+  </data>
+  <data name="UserDetail_EditRights.Content" xml:space="preserve">
+    <value>Edit rights</value>
+  </data>
+  <data name="UserDetail_Name.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="UserDetail_Nick.Text" xml:space="preserve">
+    <value>Nick name:</value>
+  </data>
+  <data name="UserDetail_OldPassword.Header" xml:space="preserve">
+    <value>Old password</value>
+  </data>
+  <data name="UserDetail_PasswordSection.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="UserDetail_RightsSection.Text" xml:space="preserve">
+    <value>Rights</value>
+  </data>
+  <data name="UserDetail_Title.Text" xml:space="preserve">
+    <value>User detail</value>
+  </data>
+  <data name="UserDetail_UserSection.Text" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="UserEdit_OldPass.Header" xml:space="preserve">
+    <value>Old password</value>
+  </data>
+  <data name="UserEdit_Title.Text" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="UserListModel.FirstName.Header" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="UserListModel.LastName.Header" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="UserListModel.NickName.Header" xml:space="preserve">
+    <value>Nick name</value>
+  </data>
+  <data name="Validation.AreNotSame" xml:space="preserve">
+    <value>Inserted values are not same.</value>
+  </data>
+  <data name="Validation.BelowZero" xml:space="preserve">
+    <value>Value is below zero.</value>
+  </data>
+  <data name="Validation.DuplicatedValue" xml:space="preserve">
+    <value>Value is already existing.</value>
+  </data>
+  <data name="Validation.NotInserted" xml:space="preserve">
+    <value>Value was not inserted.</value>
+  </data>
+  <data name="Validation.NullOrEmpty" xml:space="preserve">
+    <value>Value was not inserted or is empty string.</value>
+  </data>
+  <data name="Validation.PasswordIncorrect" xml:space="preserve">
+    <value>Password is incorrect.</value>
+  </data>
+  <data name="Validation.TooShort" xml:space="preserve">
+    <value>Inserted value is too short.</value>
+  </data>
+  <data name="Validation.ZeroValue" xml:space="preserve">
+    <value>Value is zero.</value>
+  </data>
+  <data name="Buttons.Logout" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="ContentDialog.LogOut.Header" xml:space="preserve">
+    <value>Log out user?</value>
+  </data>
+  <data name="ContentDialog.LogOut.Text" xml:space="preserve">
+    <value>Do you really want to logout current user?</value>
+  </data>
+  <data name="UserDetailModel.Password.Header" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Validation.NickPasswordMismatch" xml:space="preserve">
+    <value>User name or password is wrong.</value>
+  </data>
+  <data name="Validation.UserNotExist" xml:space="preserve">
+    <value>User is not existing.</value>
+  </data>
+  <data name="ContentDialog.ConfirmLogOut.Header" xml:space="preserve">
+    <value>Log out user "{0}"?</value>
+  </data>
+  <data name="SettingsTableCategories_Add.Content" xml:space="preserve">
+    <value>Add table category</value>
+  </data>
+  <data name="SettingsTableInfos_Add.Content" xml:space="preserve">
+    <value>Add table info</value>
+  </data>
+  <data name="SettingsUsers_Add.Content" xml:space="preserve">
+    <value>Add user</value>
+  </data>
+  <data name="ContentDialog.LogOutAllUsers.Header" xml:space="preserve">
+    <value>All users will be logged out</value>
+  </data>
+  <data name="ContentDialog.LogOutAllUsers.Text" xml:space="preserve">
+    <value>All users will be logged out from app, because is not logged no one, who could open shift.</value>
+  </data>
+  <data name="Settings.SettingsApp.DialogCategoryName" xml:space="preserve">
+    <value>Dialog windows</value>
+  </data>
+  <data name="Settings.SettingsApp.ShowConfirmDialogForLogOut.Header" xml:space="preserve">
+    <value>Show dialog window with confirmation about log out user</value>
+  </data>
+  <data name="Settings.SettingsApp.ShowInfoDialogAboutLogOutAllUsers.Header" xml:space="preserve">
+    <value>Show dialog window with information about log out all users</value>
+  </data>
+  <data name="Switch_OnOff.OffContent" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="Switch_OnOff.OnContent" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="ContentDialog.CloseAppLogOut.Header" xml:space="preserve">
+    <value>Other users are logged</value>
+  </data>
+  <data name="ContentDialog.CloseAppLogOut.Text" xml:space="preserve">
+    <value>Other users exclude you are logged in to system. Do you want to log out them and close app?</value>
+  </data>
+  <data name="Settings.SettingsProductCategories.PartName" xml:space="preserve">
+    <value>Product categories</value>
+  </data>
+  <data name="ProductCategoryDetail_EditButton.Content" xml:space="preserve">
+    <value>Edit category</value>
+  </data>
+  <data name="ProductCategoryDetail_Name.Text" xml:space="preserve">
+    <value>Category name:</value>
+  </data>
+  <data name="ProductCategoryDetail_ProductCount.Text" xml:space="preserve">
+    <value>Number of products in category:</value>
+  </data>
+  <data name="ProductCategoryDetail_ProductSection.Text" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="ProductCategoryDetail_Title.Text" xml:space="preserve">
+    <value>Product category details</value>
+  </data>
+  <data name="ProductCategoryEdit_Title.Text" xml:space="preserve">
+    <value>Product categories</value>
+  </data>
+  <data name="SettingsProductCategories_Add.Content" xml:space="preserve">
+    <value>Add product category</value>
+  </data>
+  <data name="ProductDetail_CategoryName.Text" xml:space="preserve">
+    <value>Category:</value>
+  </data>
+  <data name="ProductDetail_EditButton.Content" xml:space="preserve">
+    <value>Edit specifications</value>
+  </data>
+  <data name="ProductDetail_Name.Text" xml:space="preserve">
+    <value>Product name:</value>
+  </data>
+  <data name="ProductDetail_Price.Text" xml:space="preserve">
+    <value>Price:</value>
+  </data>
+  <data name="ProductDetail_ProductSection.Text" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="ProductDetail_Title.Text" xml:space="preserve">
+    <value>Product specifications</value>
+  </data>
+  <data name="ProductEdit_Category.PlaceholderText" xml:space="preserve">
+    <value>Select Product category</value>
+  </data>
+  <data name="ProductEdit_Title.Text" xml:space="preserve">
+    <value>Specifications of product</value>
+  </data>
+  <data name="ProductListModel.Category.Header" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="ProductListModel.Name.Header" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ProductListModel.Price.Header" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Settings.SettingsProducts.PartName" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="SettingsProducts_Add.Content" xml:space="preserve">
+    <value>Add product</value>
+  </data>
+  <data name="Table_TableTitle.Text" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="SettingsProducts_ErrorMessage.Text" xml:space="preserve">
+    <value>If you want to add product, you need first to add product category.</value>
+  </data>
+  <data name="SettingsTableInfos_ErrorMessage.Text" xml:space="preserve">
+    <value>If you want to add specification of table, you need first to add table category.</value>
+  </data>
+  <data name="OpenCloseShift.Close.Ok.Text" xml:space="preserve">
+    <value>Close shift</value>
+  </data>
+  <data name="OpenCloseShift.Close.Title.Text" xml:space="preserve">
+    <value>Close shift</value>
+  </data>
+  <data name="OpenCloseShift.Close.UserPlaceholder.Text" xml:space="preserve">
+    <value>Select user to close shift</value>
+  </data>
+  <data name="OpenCloseShift.Open.Ok.Text" xml:space="preserve">
+    <value>Open shift</value>
+  </data>
+  <data name="OpenCloseShift.Open.Title.Text" xml:space="preserve">
+    <value>Open shift</value>
+  </data>
+  <data name="OpenCloseShift.Open.UserPlaceholder.Text" xml:space="preserve">
+    <value>Select user to open shift</value>
+  </data>
+  <data name="ShiftDetailModel.CashValue.Header" xml:space="preserve">
+    <value>Cash value</value>
+  </data>
+  <data name="ShiftDetailModel.User.Header" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="ProductListModel.VatLevel.Header" xml:space="preserve">
+    <value>VAT rate</value>
+  </data>
+  <data name="VatLevel.Base_2021" xml:space="preserve">
+    <value>Base VAT rate</value>
+  </data>
+  <data name="VatLevel.FirstLower_2021" xml:space="preserve">
+    <value>First lower VAT rate</value>
+  </data>
+  <data name="VatLevel.SecondLower_2021" xml:space="preserve">
+    <value>Second lower VAT rate</value>
+  </data>
+  <data name="ProductCategoryDetail_PrintSeparately.Text" xml:space="preserve">
+    <value>Print items separately: </value>
+  </data>
+  <data name="ProductCategoryModel.PrintSeparately.Header" xml:space="preserve">
+    <value>Print items from this category separately</value>
+  </data>
+  <data name="ProductDetail_VatLevel.Text" xml:space="preserve">
+    <value>VAT rate:</value>
+  </data>
+  <data name="ProductEdit_VatLevel.Header" xml:space="preserve">
+    <value>VAT rate</value>
+  </data>
+  <data name="ProductEdit_VatLevel.PlaceholderText" xml:space="preserve">
+    <value>Insert VAT rate</value>
+  </data>
+  <data name="GoBack.Content" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Settings.SettingsApp.PasswordCategoryName" xml:space="preserve">
+    <value>Passwords</value>
+  </data>
+  <data name="Settings.SettingsApp.ShowPasswordForLogin.Header" xml:space="preserve">
+    <value>Show password for login</value>
+  </data>
+  <data name="Sell_Discount.Text" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="Table_Pay.Content" xml:space="preserve">
+    <value>Pay</value>
+  </data>
+  <data name="Table_Products.Text" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="Table_Sells.Text" xml:space="preserve">
+    <value>Sells</value>
+  </data>
+  <data name="VatLevel.None" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="TableProductSellEdit_Discount.Header" xml:space="preserve">
+    <value>Discount for product</value>
+  </data>
+  <data name="TableProductSellEdit_SellCount.Header" xml:space="preserve">
+    <value>Number of sells of product</value>
+  </data>
+  <data name="TableProductSellEdit_Title.Text" xml:space="preserve">
+    <value>Update sells for product</value>
+  </data>
+  <data name="TableSellSplit_SplitCount.Header" xml:space="preserve">
+    <value>Number of splits</value>
+  </data>
+  <data name="TableSellSplit_Title.Text" xml:space="preserve">
+    <value>Split product sells</value>
+  </data>
+  <data name="Payment_Title.Text" xml:space="preserve">
+    <value>Payment for table</value>
+  </data>
+  <data name="Payment_Discount.Text" xml:space="preserve">
+    <value>Discount:</value>
+  </data>
+  <data name="Payment_FinishPayment.Text" xml:space="preserve">
+    <value>Finish payment</value>
+  </data>
+  <data name="Payment_NextInfo.Text" xml:space="preserve">
+    <value>Another information</value>
+  </data>
+  <data name="Payment_Note.Header" xml:space="preserve">
+    <value>Note:</value>
+  </data>
+  <data name="Payment_Note.PlaceholderText" xml:space="preserve">
+    <value>Insert note for payment</value>
+  </data>
+  <data name="Payment_PaymentBankCard.Content" xml:space="preserve">
+    <value>Bank card</value>
+  </data>
+  <data name="Payment_PaymentCash.Content" xml:space="preserve">
+    <value>Cash</value>
+  </data>
+  <data name="Payment_PaymentSummary.Text" xml:space="preserve">
+    <value>Payment summary</value>
+  </data>
+  <data name="Payment_PaymentType.Text" xml:space="preserve">
+    <value>Type of payment:</value>
+  </data>
+  <data name="Payment_Price.Text" xml:space="preserve">
+    <value>Price:</value>
+  </data>
+  <data name="Payment_PriceAfterDiscount.Text" xml:space="preserve">
+    <value>Discounted price:</value>
+  </data>
+  <data name="Payment_SellsOnTable.Text" xml:space="preserve">
+    <value>Sells on table</value>
+  </data>
+  <data name="Payment_SellsToPay.Text" xml:space="preserve">
+    <value>Sells to pay</value>
+  </data>
+  <data name="Payment_Pay.Content" xml:space="preserve">
+    <value>Pay table</value>
+  </data>
+  <data name="Payment_Split.Content" xml:space="preserve">
+    <value>Split bill</value>
+  </data>
+</root>

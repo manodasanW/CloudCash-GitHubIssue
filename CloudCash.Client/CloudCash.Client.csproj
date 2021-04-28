@@ -1,0 +1,325 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows10.0.19041</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>CloudCash.Client</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>x86;x64;arm64</Platforms>
+    <RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
+    <Authors>Jan Rajnoha</Authors>
+    <Company>Para Bellum Lounge s.r.o.</Company>
+    <Product>Cloud Cash</Product>
+    <Copyright>Para Bellum Lounge 2020</Copyright>
+    <PackageProjectUrl>https://parabellumlounge.cz/</PackageProjectUrl>
+    <Configurations>Debug;Release;Debug_WPF;Debug_UWP;Test;All</Configurations>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Update="Microsoft.Windows.SDK.NET.Ref" RuntimeFrameworkVersion="10.0.18362.16" />
+    <FrameworkReference Update="Microsoft.Windows.SDK.NET.Ref" TargetingPackVersion="10.0.18362.16" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Components\**" />
+    <EmbeddedResource Remove="Components\**" />
+    <None Remove="Components\**" />
+    <Page Remove="Components\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Controls\BusyOverlay.xaml" />
+    <None Remove="Controls\ValidationMessage.xaml" />
+    <None Remove="Modules\AppWindow\Views\AppWindow.xaml" />
+    <None Remove="Modules\AppWindow\Views\WelcomeImage.xaml" />
+    <None Remove="Modules\Login\Components\LoggedUsersList.xaml" />
+    <None Remove="Modules\Login\Components\Login.xaml" />
+    <None Remove="Modules\Login\Views\LoginPage.xaml" />
+    <None Remove="Modules\MenuItem\Views\MenuControl.xaml" />
+    <None Remove="Modules\Payment\Views\Payment.xaml" />
+    <None Remove="Modules\ProductCategory\Components\ProductCategoryEdit.xaml" />
+    <None Remove="Modules\ProductCategory\Views\ProductCategoryDetail.xaml" />
+    <None Remove="Modules\ProductSelector\Views\ProductSelector.xaml" />
+    <None Remove="Modules\Product\Components\ProductEdit.xaml" />
+    <None Remove="Modules\Product\Views\ProductDetail.xaml" />
+    <None Remove="Modules\Sell\Controls\TableProductSellEdit.xaml" />
+    <None Remove="Modules\Sell\Controls\TableSellSplit.xaml" />
+    <None Remove="Modules\Settings\Views\Settings.xaml" />
+    <None Remove="Modules\Settings\Views\SettingsApp.xaml" />
+    <None Remove="Modules\Settings\Views\SettingsProductCategories.xaml" />
+    <None Remove="Modules\Settings\Views\SettingsProducts.xaml" />
+    <None Remove="Modules\Settings\Views\SettingsTableCategories.xaml" />
+    <None Remove="Modules\Settings\Views\SettingsTableInfos.xaml" />
+    <None Remove="Modules\Settings\Views\SettingsUsers.xaml" />
+    <None Remove="Modules\Shift\Controls\CloseShift.xaml" />
+    <None Remove="Modules\Shift\Controls\OpenCloseShift.xaml" />
+    <None Remove="Modules\Shift\Controls\OpenShift.xaml" />
+    <None Remove="Modules\TableCategory\Components\TableCategoryEdit.xaml" />
+    <None Remove="Modules\TableCategory\Views\TableCategoryDetail.xaml" />
+    <None Remove="Modules\TableInfo\Components\TableInfoEdit.xaml" />
+    <None Remove="Modules\TableInfo\Views\TableInfoDetail.xaml" />
+    <None Remove="Modules\TablesView\Views\TablesView.xaml" />
+    <None Remove="Modules\Table\Views\Table.xaml" />
+    <None Remove="Modules\User\Components\UserEdit.xaml" />
+    <None Remove="Modules\User\Views\UserDetail.xaml" />
+    <None Remove="Strings\cs-CZ\Resources.resw" />
+    <None Remove="Strings\en-US\Resources.resw" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.0-preview2.21106.5" />
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0-preview.3.21201.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ProjectReunion" Version="0.5.6" />
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls" Version="8.0.0-preview5" />
+    <PackageReference Include="Microsoft.VCRTForwarders.140" Version="1.0.7" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.WinUI.Managed" Version="2.0.3" />
+    <Manifest Include="$(ApplicationManifest)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Modules\Card\Messages\" />
+    <Folder Include="Modules\Card\ViewModels\" />
+    <Folder Include="Modules\Customer\Messages\" />
+    <Folder Include="Modules\Customer\ViewModels\" />
+    <Folder Include="Modules\Reservation\Messages\" />
+    <Folder Include="Modules\Reservation\ViewModels\" />
+    <Folder Include="Modules\Sell\Messages\" />
+    <Folder Include="Modules\Sell\ViewModels\" />
+    <Folder Include="Modules\TableComponent\Messages\" />
+    <Folder Include="Modules\Table\Data\" />
+    <Folder Include="Modules\Table\Design\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PRIResource Include="Strings\cs-CZ\Resources.resw" />
+    <PRIResource Include="Strings\en-US\Resources.resw" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CloudCash.BL\CloudCash.BL.csproj" />
+    <ProjectReference Include="..\CloudCash.Common\CloudCash.Common.csproj" />
+    <ProjectReference Include="..\CloudCash.Interface\CloudCash.Interface.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Payment\Views\Payment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Sell\Controls\TableProductSellEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Sell\Controls\TableSellSplit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Shift\Controls\OpenCloseShift.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Shift\Controls\CloseShift.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Shift\Controls\OpenShift.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\ProductSelector\Views\ProductSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Settings\Views\SettingsProducts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Product\Views\ProductDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Product\Components\ProductEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\ProductCategory\Views\ProductCategoryDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\ProductCategory\Components\ProductCategoryEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Settings\Views\SettingsProductCategories.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Table\Views\Table.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\AppWindow\Views\WelcomeImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\AppWindow\Views\AppWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Login\Views\LoginPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Login\Components\LoggedUsersList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Login\Components\Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\User\Views\UserDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\TableCategory\Views\TableCategoryDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\TableInfo\Views\TableInfoDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\User\Components\UserEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Settings\Views\SettingsUsers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Controls\ValidationMessage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\TableInfo\Components\TableInfoEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Settings\Views\SettingsTableInfos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Controls\BusyOverlay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\TableCategory\Components\TableCategoryEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Settings\Views\SettingsTableCategories.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Settings\Views\SettingsApp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\Settings\Views\Settings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\TablesView\Views\TablesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\MenuItem\Views\MenuControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Modules\MenuItem\Views\MenuItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>

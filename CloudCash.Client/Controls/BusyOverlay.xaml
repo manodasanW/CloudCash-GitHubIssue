@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="CloudCash.Client.Controls.BusyOverlay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:CloudCash.Client.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="using:CloudCash.Client.Converters"
+             mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    </UserControl.Resources>
+
+    <Grid Visibility="{Binding IsBusy, Converter={StaticResource BoolToVisibilityConverter}}">
+        <Grid.Background>
+            <AcrylicBrush BackgroundSource="Backdrop"
+                          TintOpacity="0.25"
+                          TintLuminosityOpacity="0.25"
+                          TintColor="#FFFFFFFF"
+                          FallbackColor="#25252525"/>
+        </Grid.Background>
+
+        <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+
+            <ProgressRing Height="75"
+                          Width="75"/>
+
+            <TextBlock x:Uid="BusyOverlay_Message"
+                       Margin="0 12 0 0" 
+                       Style="{StaticResource TitleTextBlockStyle}"/>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>
