@@ -207,7 +207,7 @@
     <SDKReference Include="Microsoft.VCLibs, Version=14.0" Condition="'$(Configuration)' == 'Debug'" />
     <SDKReference Include="Microsoft.VCLibs, Version=14.0" Condition="'$(Configuration)'=='Debug_WPF'" />
     <SDKReference Include="Microsoft.VCLibs, Version=14.0" Condition="'$(Configuration)'=='Debug_UWP'" />
-    <PackageReference Include="Microsoft.ProjectReunion" Version="[0.5.6]">
+    <PackageReference Include="Microsoft.ProjectReunion" Version="[$(ReunionVersion)]">
       <IncludeAssets>build</IncludeAssets>
     </PackageReference>
   </ItemGroup>

@@ -7,7 +7,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:productSelector="using:CloudCash.Client.Modules.ProductSelector.Views"
       xmlns:controls="using:CloudCash.Client.Controls"
-      xmlns:communityWinUI="using:Microsoft.Toolkit.Uwp.UI.Controls"
+      xmlns:communityWinUI="using:CommunityToolkit.WinUI.UI.Controls"
       xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
       xmlns:ui="using:Microsoft.Xaml.Interactions.Core" 
       xmlns:converters="using:CloudCash.Client.Converters"

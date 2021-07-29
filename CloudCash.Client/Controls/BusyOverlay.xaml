@@ -13,7 +13,7 @@
 
     <Grid Visibility="{Binding IsBusy, Converter={StaticResource BoolToVisibilityConverter}}">
         <Grid.Background>
-            <AcrylicBrush BackgroundSource="Backdrop"
+            <AcrylicBrush
                           TintOpacity="0.25"
                           TintLuminosityOpacity="0.25"
                           TintColor="#FFFFFFFF"
