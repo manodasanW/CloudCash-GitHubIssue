@@ -86,7 +86,7 @@
   <PropertyGroup>
     <ProjectGuid>9c70884d-cda1-4e8f-9631-00a69792d839</ProjectGuid>
     <TargetPlatformVersion>10.0.19041.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
     <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
     <EntryPointProjectUniqueName>..\CloudCash.Client\CloudCash.Client.csproj</EntryPointProjectUniqueName>

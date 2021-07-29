@@ -4,5 +4,6 @@
         <CustomSDKVersion>10.0.19041.20</CustomSDKVersion>
         <CsWinRTVersion>1.3.3</CsWinRTVersion>
         <CustomWCTBuild>7.0.3</CustomWCTBuild>
+        <WindowsSDKPackageVersion>10.0.19041.20</WindowsSDKPackageVersion>
     </PropertyGroup>
 </Project>
