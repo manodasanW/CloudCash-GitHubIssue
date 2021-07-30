@@ -92,14 +92,7 @@ namespace CloudCash.Common.MVVM
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string caller = null)
         {
-            try
-            {
-               PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(caller));
-            }
-            catch
-            {
-                Debug.WriteLine("Fuck");
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(caller));
         }
     }
 }

@@ -14,6 +14,7 @@
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
       DataContext="{Binding Source={StaticResource VMLocator}, Path=TableVM}">
 
+    <!--
     <interactivity:Interaction.Behaviors>
         <ui:EventTriggerBehavior EventName="Loaded">
             <ui:InvokeCommandAction Command="{Binding PageLoadedCommand}"
@@ -203,5 +204,5 @@
                               Margin="-24"
                               IsBusy="{Binding IsBusy}"/>
 
-    </Grid>
+    </Grid>-->
 </Page>

@@ -21,7 +21,7 @@
 
     <Grid>
 
-        <ComboBox x:Name="TablesView_CategoriesCombo" 
+<!--        <ComboBox x:Name="TablesView_CategoriesCombo" 
                   x:Uid="TablesView_CategoriesCombo"
                   ItemsSource="{Binding Categories}"
                   HorizontalAlignment="Right"
@@ -36,7 +36,8 @@
             </ComboBox.ItemTemplate>
 
         </ComboBox>
-
+-->
+        
         <ListView x:Name="TableList"
                   MaxWidth="300"
                   Margin="24"
