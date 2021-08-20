@@ -1,6 +1,6 @@
 <Project>
     <PropertyGroup>
-        <ReunionVersion>0.8.2-20210720.0.CI</ReunionVersion>
+        <ReunionVersion>0.8.3-20210819.0.CI</ReunionVersion>
         <CustomSDKVersion>10.0.19041.20</CustomSDKVersion>
         <CsWinRTVersion>1.3.3</CsWinRTVersion>
         <CustomWCTBuild>7.0.3</CustomWCTBuild>
