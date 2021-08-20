@@ -14,8 +14,8 @@ namespace CloudCash.Client.Modules.Table.Views
         public Table()
         {
             this.InitializeComponent();
-         //   GC.Collect();
-         //   GC.WaitForPendingFinalizers();
+         GC.Collect();
+           GC.WaitForPendingFinalizers();
         }
     }
 }
